@@ -1,0 +1,28 @@
+.square{
+    padding: 20px;
+    width: 350px;
+    height: 200px;
+    background-color: rgb(90, 157, 239);
+    border: 5px solid rgb(15, 96, 195);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.square h2{
+    color:rgb(15, 96, 195);
+    background-color: rgb(90, 157, 239);
+}
+
+.square button{
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    background:rgb(15, 96, 195);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 7px;
+    margin-top: 25px;
+}

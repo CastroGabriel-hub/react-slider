@@ -1,0 +1,19 @@
+.App{
+    height: 90vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-slider, .slick-list, .slick-track{
+    width: 95vw;
+    overflow: visible;
+    z-index: 0;
+    position: relative;
+}
+/* .slick-slide div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
