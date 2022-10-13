@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import './App.css';
 import Square from './components/Square/Square';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import arrowLeft from './assets/arrowLeft.png';
 import arrowRight from './assets/arrowRight.png';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import './App.css';
 
 function PrevArrow(props){
   const { className, style, onClick } = props;
@@ -21,7 +21,6 @@ function NextArrow(props){
     <img src={arrowRight} alt="Ir para a direita" className={className} style={{ ...style,display: 'block', margin: '-10px auto', }} onClick={onClick}/>
   );
 }
-
 
 function App() {
   const settings = {
@@ -44,6 +43,7 @@ function App() {
 
   return (
     <div className="App">
+      <button></button>
       <Slider {...settings}>
         {squares}
       </Slider>
