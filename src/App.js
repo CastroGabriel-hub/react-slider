@@ -1,10 +1,14 @@
-import React, { Component } from "react";
-import Square from './components/Square/Square';
+import React, { Component, useState, useRef } from "react";
 import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from "swiper";
+import Square from './components/Square/Square';
 import arrowLeft from './assets/arrowLeft.png';
 import arrowRight from './assets/arrowRight.png';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "swiper/css";
+import "swiper/css/navigation";
 import './App.css';
 
 function PrevArrow(props){
@@ -43,10 +47,22 @@ function App() {
 
   return (
     <div className="App">
-      <button></button>
-      <Slider {...settings}>
+      {/* <Slider {...settings}>
         {squares}
-      </Slider>
+      </Slider> */}
+
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation={true}
+      modules={[Navigation]}
+    >
+
+      {squares.map((square) => <SwiperSlide>
+        {square}
+      </SwiperSlide>)}
+
+    </Swiper>
     </div>
   );
 }
